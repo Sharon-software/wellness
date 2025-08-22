@@ -40,7 +40,7 @@ emailjs.send(serviceId, templateId, templateParams, publicKey)
     
       <form onSubmit={handleSubmit} className="contact-form">
         <fieldset>
-          <legend>Email Form</legend>
+          
           <label>Name</label>
           <input 
           type="text" 

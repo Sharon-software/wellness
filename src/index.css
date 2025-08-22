@@ -5,6 +5,7 @@
   overflow-x: hidden;
   margin: 0 auto;
   box-sizing: border-box;
+
 }
 
 
@@ -27,14 +28,14 @@ body {
 }
 
 .logo img {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
 }
 
 .logo h1 {
   margin: 0;
   color: chocolate;
-  font-size: 2.2rem;
+  font-size:1.8rem;
   font-weight: bolder;
 }
 
@@ -118,28 +119,50 @@ body {
 
 
 .info-box {
-  background: rgba(255, 255, 255, 0.8);
-  width: 90%;
+  background:rgb(235, 193, 116);
+  width:90%;
   max-width: 1000px;
-  height: auto;
+  height: auto; 
   margin: 10px auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  flex: 1 1 250px;
+  align-items: center; 
+  justify-content:flex-start;
+  flex-wrap: wrap; 
+  gap: 20px;        
+  padding:20px;
   box-sizing: border-box;
-  flex-wrap: nowrap; 
+  border-radius:50px;
 }
 
-.info-box img {
-  max-width: 200px;
-  height: auto;
-  margin-right: 10px;
-}
 
 .info-box .icon {
   font-size: 3rem;
-  color: black;
+  color:brown;
+  flex-shrink: 0;
+ 
+}
+
+.info-box img {
+  max-width:100px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+.info-box :hover{
+  color:wheat;
+ 
+}
+.info-box img:hover{
+  transform: scale(2.3);
+ }
+
+.info-box h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+  color:brown;
+  text-decoration: none;
 }
 
 
@@ -183,16 +206,17 @@ body {
 
 
 .contact-form {
-  width: 90%;
+  width: 80%;
   max-width: 500px;
   margin: 20px auto;
 }
 
 .contact-form fieldset {
-  border: 5px solid rgb(221, 190, 133);
-  border-radius: 30px;
-  padding: 10px;
+  border:0 solid rgb(221, 190, 133);
+  border-radius:30px;
+  padding: 15px;
   box-sizing: border-box;
+  box-shadow: 15px 20px 15px 20px #eed4d4;
 }
 
 
@@ -206,22 +230,29 @@ img {
   body { font-size: 14px; }
   .navbar { width: 85%; }
   .service { width: 85%; }
+  .info-box {display: flex; flex-direction:row;}
 }
 
 @media (max-width: 992px) {
   body { font-size: 13px; }
   .navbar { width: 80%; }
   .service { width: 80%; }
+  .info-box {display: flex;flex-direction:row;}
 }
 
 @media (max-width: 768px) {
   body { font-size: 12px; }
-  .navbar { width: 75%; }
+  .navbar { width:55%; }
   .service { width: 75%; }
+  .info-box {display: flex;flex-direction: row;}
+  .contact-form { width:70%;}
 }
 
 @media (max-width: 480px) {
-  body { font-size: 11px; }
-  .navbar { width: 90%; }
+  body { font-size: 20px; }
+  .nav .logo h1{font-size:1rem; display:flex; }
+  .navbar { width:50%; }
   .service { width: 90%; }
+  .info-box {width:90%;display: flex;flex-direction:row;}
+  .contact-form fieldset {margin-left:40px;width:60%;}
 }

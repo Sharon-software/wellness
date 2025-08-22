@@ -11,26 +11,27 @@ const About = () => {
       <div className="content">
         <div className="info-box">
           <Link to ="/Corporate">
-          <img src={img2} alt="img2" />
           <h3>CORPORATE WELLNESS & ORGANISATIONAL SUPPORT</h3>
-          <span className="icon"><HiOutlineArrowSmallRight/></span>
+          <img src={img2} alt="img2" />
+          
           </Link>
         </div>
 
         <div className="info-box">
           <Link to="/Schools">
-          <img src={img1} alt="img1" />
           <h3>SCHOOL & EDUCATIONAL INSTITUTION PROGRAMS</h3>
-          <span className="icon"><HiOutlineArrowSmallRight/></span>
+          <img src={img1} alt="img1" />
+          
+          
           </Link>
         </div>
 
         <div className="info-box">
           <Link to="/Government">
-          <img src={img3} alt="img3" />
           <h3>GOVERNMENT & COMMUNITY DEVELOPMENT SERVICES</h3>
-          <div className="icon"><HiOutlineArrowSmallRight/></div>
-          </Link>
+          <img src={img3} alt="img3" />
+          
+      </Link>
         </div>
         
       </div>

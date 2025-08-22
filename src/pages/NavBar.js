@@ -15,6 +15,7 @@ const NavBar = () => {
       <div className="logo">
         <img src={logo} alt="logo"/>
         <h1>BM MATHEBULA </h1> 
+        
         <div className="navbar">
       <ul>
         <li>
