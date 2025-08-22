@@ -246,6 +246,8 @@ img {
   .service { width: 75%; }
   .info-box {display: flex;flex-direction: row;}
   .contact-form { width:70%;}
+  .logo .logo img{width:2rem;height:2rem;}
+  .logo .logo h1{font-size:1rem; display:flex;}
 }
 
 @media (max-width: 480px) {
@@ -255,4 +257,6 @@ img {
   .service { width: 90%; }
   .info-box {width:90%;display: flex;flex-direction:row;}
   .contact-form fieldset {margin-left:40px;width:60%;}
+  .logo .logo img{width:2rem;height:2rem;}
+  .logo .logo h1{font-size:1rem; display:flex;}
 }
