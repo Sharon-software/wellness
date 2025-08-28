@@ -62,7 +62,7 @@ emailjs.send(serviceId, templateId, templateParams, publicKey)
           <br />
 
           <textarea
-          cols="80"
+          cols="40"
           rows="10"
           placeholder="Enter your message" required style={{ marginBottom: '50px' }}
           value={message}

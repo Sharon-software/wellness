@@ -293,7 +293,7 @@ img {
 }
   .service { width: 75%; }
   .info-box {display: flex;flex-direction: row;}
-  .contact-form { width:70%;}
+  .contact-form {width:70%;}
   .logo  img{width:2rem;height:2rem;}
   .logo  h1{font-size:1rem; display:flex;}
   .menu-btn{display:flex; padding:1rem;margin-left:40%;flex-direction:column;cursor: pointer;}
