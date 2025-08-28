@@ -3,10 +3,12 @@ import {NavLink,useNavigate} from 'react-router-dom';
 import logo from '../images/logo.jpeg'
 import { FaHouseChimney } from "react-icons/fa6";
 import { FaInfoCircle } from "react-icons/fa";
-
+import {useState} from "react"
 import { IoMdText } from "react-icons/io";
 
 const NavBar = () => {
+  const [isOpen,setIsOpen]=useState(false);
+
   return (
     <>
 
@@ -16,7 +18,9 @@ const NavBar = () => {
         <img src={logo} alt="logo"/>
         <h1>BM MATHEBULA </h1> 
         
-        <div className="navbar">
+
+         <div className={`navbar ${isOpen ? "active":""}`}>
+         
       <ul>
         <li>
              <NavLink to="/">
@@ -39,18 +43,24 @@ const NavBar = () => {
              </NavLink>
         </li>
       </ul>
-    </div>
       </div>
+
+      <div className={`menu-btn ${isOpen ? "open":""}`} onClick={()=>setIsOpen(!isOpen)}>
+        <span></span>   
+        <span></span>
+        <span></span>
+      </div>
+      </div>
+      
+      
 
       <div className="head">
      <h2>SUPPORT SERVICE AND WELLNESS </h2>
      <h3>Empowering lives through<br>
      </br>holistic psychological support</h3>
     </div>
-</div>
-
-     
-    
+   
+    </div>
   
     </>
   )

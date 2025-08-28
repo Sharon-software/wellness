@@ -48,6 +48,13 @@ body {
   color: chocolate;
   font-size: 0.9rem;
 }
+.nav {
+  width: 100%;
+  
+  color: white;
+  position: relative;
+  z-index: 10;
+}
 
 .navbar {
   border: 2px solid rgb(223, 182, 154);
@@ -61,6 +68,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px auto;
+  margin-left:500px;
 }
 
 .navbar ul {
@@ -88,8 +96,38 @@ body {
 
 .navbar .active {
   color: rgb(240, 239, 189);
-}
 
+}
+.menu-btn {
+ display:none;
+  flex-direction: column;
+  cursor: pointer;
+   justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  transition: transform 0.3s ease;
+ background-color: #e0cda4;
+  border-radius: 5px;
+  margin-left:80%;
+}
+.menu-btn span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.menu-btn :hover span{
+  background-color:brown;
+}
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 .service {
   background-color: rgb(226, 171, 103);
@@ -242,21 +280,46 @@ img {
 
 @media (max-width: 768px) {
   body { font-size: 12px; }
-  .navbar { width:55%; }
+  .navbar{ display: none;
+    flex-direction: column;
+    position: absolute;
+    width:30%;
+    height:150%;
+    background-color:rgb(235, 218, 201);
+    padding: 1rem;
+    border-radius: 5px;
+    top:60px;
+   z-index:50;
+}
   .service { width: 75%; }
   .info-box {display: flex;flex-direction: row;}
   .contact-form { width:70%;}
-  .logo .logo img{width:2rem;height:2rem;}
-  .logo .logo h1{font-size:1rem; display:flex;}
+  .logo  img{width:2rem;height:2rem;}
+  .logo  h1{font-size:1rem; display:flex;}
+  .menu-btn{display:flex; padding:1rem;margin-left:40%;flex-direction:column;cursor: pointer;}
+  .navbar.active{display:flex; position:absolute; right:10px; padding:1rem; border-radius:5px; z-index:10; background-color: rgb(235, 193, 148)}
+    .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar li {
+    margin: 1rem; 
+   text-align: center;
+
+  }
+
 }
 
 @media (max-width: 480px) {
   body { font-size: 20px; }
   .nav .logo h1{font-size:1rem; display:flex; }
-  .navbar { width:50%; }
+  .navbar { width:50%; margin-left:50%; }
   .service { width: 90%; }
   .info-box {width:90%;display: flex;flex-direction:row;}
   .contact-form fieldset {margin-left:40px;width:60%;}
-  .logo .logo img{width:2rem;height:2rem;}
-  .logo .logo h1{font-size:1rem; display:flex;}
+  .logo  img{width:2rem;height:2rem;}
+  .logo  h1{font-size:1rem; display:flex;}
 }
